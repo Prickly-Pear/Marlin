@@ -1051,7 +1051,7 @@
  * A total of 3 or more adds more slow probes, taking the average.
  */
 //#define MULTIPLE_PROBING 2
-//#define EXTRA_PROBING    1
+//#define EXTRA_PROBING    3
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1105,8 +1105,8 @@
 // Require minimum nozzle and/or bed temperature for probing
 #define PREHEAT_BEFORE_PROBING
 #if ENABLED(PREHEAT_BEFORE_PROBING)
-  #define PROBING_NOZZLE_TEMP 150   // (°C) Only applies to E0 at this time
-  #define PROBING_BED_TEMP     60
+  //#define PROBING_NOZZLE_TEMP 150   // (°C) Only applies to E0 at this time
+  //#define PROBING_BED_TEMP     60
 #endif
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
@@ -1412,7 +1412,7 @@
   //========================= Unified Bed Leveling ============================
   //===========================================================================
 
-  //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
+  #define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
   #define MESH_INSET 5              // Set Mesh bounds as an inset region of the bed
   #define GRID_MAX_POINTS_X 10      // Don't use more than 15 points per axis, implementation limited.
@@ -1442,7 +1442,7 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
-#define LCD_BED_LEVELING
+//#define LCD_BED_LEVELING
 
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.010 // (mm) Step size while manually probing Z axis.
